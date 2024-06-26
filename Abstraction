@@ -1,0 +1,49 @@
+package com.practice.OOPS;
+
+public abstract class Abstraction {
+public abstract void meth1();
+public abstract void meth1(String name);	
+   static void SimpleMethod() {
+	System.out.println("simple method in abstraction");
+   }
+   static void StaticMethod() {
+	System.out.println("Static Method in Abstraction");
+   }
+  Abstraction() {
+	System.out.println("Abstraction Class Construction");
+    }
+  
+  public static void main(String[] args) {
+	System.out.println("this the main mehod for abstraction");
+	    // Abstraction abst=new Abstraction();// we can't instantiate in abstract method
+	Abstraction.SimpleMethod();
+	Abstraction.StaticMethod();
+	
+}
+  }
+
+
+
+
+====================================================
+
+package com.practice.OOPS;
+
+public  class AbstractionData  extends Abstraction {
+	public void meth1() {
+		System.out.println("abstract method overriden");
+	}
+	public void meth1(String data) {
+		System.out.println(data);
+	}
+
+	public static void main(String[] args) {
+		Abstraction abstr =new AbstractionData();
+		 abstr.meth1();
+		 abstr.SimpleMethod();
+		 abstr.meth1("java is awesome ");
+	}
+
+}
+
+
