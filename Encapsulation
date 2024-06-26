@@ -1,0 +1,47 @@
+package com.venkat.encapsulation;
+
+public class Encapsulation {
+	private String StudentName;
+	private int StudentId;
+	public String getStudentName() {
+		return StudentName;
+	}
+	public void setStudentName(String studentName) {
+		StudentName = studentName;
+	}
+	public int getStudentId() {
+		return StudentId;
+	}
+	public void setStudentId(int studentId) {
+		StudentId = studentId;
+	}
+}
+
+
+
+
+
+
+
+=============================================================================================================
+
+
+
+
+package com.venkat.encapsulation;
+
+public class DetailsOfSudents extends Encapsulation {
+	
+
+	public static void main(String[] args) {
+		Encapsulation details = new Encapsulation();
+		details.setStudentName("venkat");
+		details.setStudentId(121);
+		System.out.println("student name: "+details.getStudentName());
+		System.out.println("student Id: "+details.getStudentId());
+		System.out.println("student name: "+details.getStudentName());
+		System.out.println("student Id: "+details.getStudentId());
+
+	}
+
+}
