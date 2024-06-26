@@ -1,0 +1,39 @@
+package com.practice.OOPS;
+
+public class Inheritence {
+	public void simpleMethod() {
+		System.out.println("Inheritence Class Of Simple Method");
+		
+	}
+	public void SecondMehod(String data) {
+		System.out.println("Inheritence Class Of Second method");
+		System.out.println(data);
+	}
+
+}
+
+
+===========================================================================================================================
+
+package com.practice.OOPS;
+
+public class InheritenceData1 {
+	public void SimpleMethod() {
+		System.out.println("InheritenceData1 Class Of Simple Method ");
+	}
+
+
+	public static void main(String[] args) {
+		Inheritence intern	=new Inheritence();// has a realationship means we can use the keyword extends and implements
+		intern.simpleMethod();
+//		intern.SecondMehod("Java is awesome ");
+		System.out.println("=======================");
+		InheritenceData1 intern1=new InheritenceData1();// is a realationship 
+		intern1.SimpleMethod();
+		intern.simpleMethod();
+		intern.SecondMehod("Java is awesome ");
+		
+
+	}
+
+}
