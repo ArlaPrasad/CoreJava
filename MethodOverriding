@@ -1,0 +1,48 @@
+package com.venkat.MethodOverriding;
+
+public class MethodOverriding {
+	public void SimpleMethod() {
+		System.out.println("Method Overriding");
+	}
+	void IntegerMethod(int a,int b) {
+		System.out.println("Additin :"+(a+b));
+	}
+	protected void StringMethod(String string1,int c) {
+		System.out.println("int value "+c);
+		System.out.println("String value "+string1);
+	}
+
+}
+
+
+
+=============================================================================================
+
+
+package com.venkat.MethodOverriding;
+
+public class StreamOfMethodOverriding  extends MethodOverriding{
+	public void SimpleMethod() {
+		System.out.println(" Simple Method in MethodOverriding");
+		
+	}
+	public void IntegerMethod(int x,int y) {
+		System.out.println(+(x+y));
+		
+	}
+	public void StrignMethod(String string1,int z) {
+		System.out.println(" "+string1);
+		System.out.println(+z);
+	}
+
+	public static void main(String[] args) {
+		StreamOfMethodOverriding overriding =new StreamOfMethodOverriding();
+		overriding.SimpleMethod();
+		overriding.IntegerMethod(19, 20);
+		overriding.StringMethod("venkata",25);
+		
+		
+
+	}
+
+}
