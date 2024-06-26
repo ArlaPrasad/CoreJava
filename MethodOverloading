@@ -1,0 +1,26 @@
+package com.venkatMetodOverloading;
+
+public class MethodOverloading {
+	public void SimpleMethod() {
+		System.out.println(" Working on Method Overloading");
+	}
+	void SimpleMethod(String string1) {
+		System.out.println("java is "+string1);
+	}
+	public void SimpleMethod(int a,int b) {
+		System.out.println(+(a+b));
+	}
+	public void SimpleMethod(int y) {
+	System.out.println(+y);
+	}
+
+	public static void main(String[] args) {
+		MethodOverloading overloading=new MethodOverloading();
+		overloading.SimpleMethod();
+		overloading.SimpleMethod(10,20);
+		overloading.SimpleMethod("awesome");
+		overloading.SimpleMethod(200,100);
+		
+	}
+
+}
