@@ -1,0 +1,42 @@
+package com.venkat.Strings;
+
+public class StringVariations {
+	
+	void Stringhandlings() {
+		String string1="java";
+		String string2 ="java";
+		//String string="venkat";
+		char arr[]= {'v','e','n','k','a','t'};
+		String string3=new String(arr);
+		String string4=new String(arr,2,2);
+		System.out.println("string1 "+string1);
+		System.out.println("string2 "+string2);
+		System.out.println("string3 "+string3);
+		System.out.println("string4 "+string4);
+		System.out.println("conncatination");
+		System.out.println("before concatination "+string1);
+		//System.out.println("after concatination "+string1.concat("is awesome"));
+		//string1=string1.concat("is awesome");
+		System.out.println(string1);
+		System.out.println(string1.equals(string2));
+		System.out.println(string1.equals("java"));
+		System.out.println(string1.equals("JAVA"));
+		System.out.println(string1.equalsIgnoreCase("java"));
+		System.out.println("================================");
+		System.out.println(string1==string2);
+		System.out.println(string3==string4);
+		System.out.println(string1=="java");
+		System.out.println(string2=="java");
+		System.out.println(string2==string1);	
+		String data="babu";
+		 
+	}
+
+	public static void main(String[] args) {
+		StringVariations handling=new StringVariations();
+		handling.Stringhandlings();
+
+
+	}
+
+}
