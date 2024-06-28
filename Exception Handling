@@ -1,0 +1,30 @@
+package com.venkat.Exceptions;
+
+import java.util.Scanner;
+
+public class ExceptionsWithScanner {
+	void ExceptionHandling() {
+	Scanner sc2=new Scanner(System.in);
+    System.out.println(10);
+    
+    try {
+		System.out.println("try block is executed");
+		System.out.println("please enter any number");
+		System.out.println("=========>> "+20/sc2.nextInt());
+	} catch (ArithmeticException e) {
+	
+		System.out.println(" catch block is executed ");
+		e.printStackTrace();
+	}
+    finally {
+    	System.out.println("finally block is executed");
+    	sc2.close();
+    }
+	System.out.println(30);
+	}
+	public static void main(String[] args) {
+		new ExceptionsWithScanner().ExceptionHandling();
+		
+	}
+
+}
