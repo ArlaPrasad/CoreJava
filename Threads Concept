@@ -1,0 +1,112 @@
+package com.venkat.thread;
+
+public class SimpleClassOnThread extends Thread{
+	@Override
+	public void run() {
+		for(int i=1;i<=5;i++) {
+			
+		System.out.println("run() executed : "+i);
+		
+		}
+	}
+
+	public static void main(String[] args) {
+		SimpleClassOnThread refer1 = new SimpleClassOnThread();
+		Thread thread1= new Thread(refer1); 
+		thread1.start();
+		Thread thread2=new Thread();
+		thread2.start();
+	}
+
+}
+
+
+
+===========================================================================================================
+
+
+package com.venkat.thread;
+
+public class TwoThreadsOnWorking implements Runnable{
+	public void run() {
+		String StudentName=Thread.currentThread().getName();
+		int StudentID=Thread.currentThread().getPriority();
+		for(int i=1;i<=5;i++) {
+			System.out.println(StudentName+" "+StudentID+"run() method has executed"+i);
+			
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		Runnable refere1=new TwoThreadsOnWorking();
+		Thread thread1=new Thread(refere1);
+		Thread thread2=new Thread(refere1);
+		thread1.setName("First-Thread");
+		thread2.setName("second-Thread");
+		thread1.setPriority(1);
+		thread1.setPriority(5);
+		thread1.start();
+		thread2.start();
+
+	}
+
+}
+
+
+===============================================================================
+
+package com.venkat.thread;
+
+public class UsingInterupt extends Thread{
+	public void run() {
+		System.out.println("Iam Ready For Interview");
+		for(int i=1;i<=5;i++) {
+			System.out.println("This is My "+i+" interview");
+			
+		}
+		System.out.println("Finally I got placed now i can relax");
+	
+	try {
+		Thread.sleep(500);
+		System.out.println("It's Time To go to Office");
+		
+	}catch(InterruptedException e) {
+		System.out.println("It's Time To Office");
+		
+	}
+	}
+	public static void main(String[] args) {
+		UsingInterupt interpted = new  UsingInterupt();
+		Thread thread1=new Thread(interpted);
+		thread1.start();
+		thread1.interrupt();
+
+	}
+
+}
+
+===============================================================
+
+
+package com.venkat.thread;
+
+public class UsingSleepMethod extends Thread{
+
+	public static void main(String[] args) {
+		Thread thread1 = new Thread();
+		
+		try {
+			System.out.println("Venkata");
+			thread1.sleep(500);
+			System.out.println("Vara");
+			Thread.sleep(500);
+			System.out.println("prasad");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}
