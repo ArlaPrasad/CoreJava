@@ -1,0 +1,59 @@
+package com.venkat.LIST;
+
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class BasedOnLinkedlist {
+	public void SimpleMethod() {
+		System.out.println("Implementing On LinkedList ");
+		LinkedList<Object> list=new LinkedList<Object>();
+		list.add(10);// insertion order is maintained 
+		list.add("java");// it is allowed heterogeneous data
+		list.add(null);// null is allowed
+		list.add(625);//it is available from java 1.2v
+		list.add(63);// default capacity is 0
+		list.add(45);//it is increased by double
+		list.add(90);//it is non-synchronized
+		System.out.println(list);
+		System.out.println("retriving the data by using for");
+		System.out.println(" using size method "+list.size());
+		//System.out.println("using capacity method "+list.c);
+		
+		for(int i=0;i<=list.size()-1;i++) {
+			System.out.print(" "+list.get(i));
+			
+		}
+		System.out.println();
+		System.out.println();
+		for(Object data:list) {
+			System.out.print(" "+data);
+		}
+		System.out.println();
+		System.out.println("retriving the data using the ListIterator");
+		ListIterator<Object> listiterator=list.listIterator();
+		while(listiterator.hasNext()) {
+			System.out.print(" "+listiterator.next());
+		}
+		System.out.println();
+		System.out.println();
+		while(listiterator.hasPrevious()) {
+			System.out.print(" "+listiterator.previous());
+			
+		}
+		System.out.println("=============");
+		//list.remove(2);
+		//list.remove();
+		System.out.print(list);
+		System.out.println(list.getFirst());
+		System.out.println(list.getLast());
+		list.addFirst("java is awesome");
+		list.addLast(true);
+		System.out.println(list);
+	}
+
+	public static void main(String[] args) {
+		new BasedOnLinkedlist().SimpleMethod();
+
+	}
+
+}
