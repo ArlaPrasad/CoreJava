@@ -1,0 +1,51 @@
+package com.venkat.UserdefinedOnList;
+
+public class StudentDetails {
+	private String studentName;
+	private int studentId;
+	private String studentTechnology;
+	public StudentDetails(String studentName, int studentId, String studentTechnology) {
+		super();
+		this.studentName = studentName;
+		this.studentId = studentId;
+		this.studentTechnology = studentTechnology;
+	}
+	@Override
+	public String toString() {
+		return "StudentDetails [studentName=" + studentName + ", studentId=" + studentId + ", studentTechnology="
+				+ studentTechnology + "]";
+	}
+	
+
+}
+
+
+============================================================================================
+
+
+package com.venkat.UserdefinedOnList;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class StudentInformation {
+	void Simplemethod() {
+		System.out.println("passing user defined Objects into Collections class");
+		ArrayList<StudentDetails> arraylist=new ArrayList<StudentDetails>();
+		StudentDetails details =new StudentDetails("prasad",143,"ai");
+		arraylist.add(new StudentDetails("venkat",111,"java"));
+		arraylist.add(new StudentDetails("mounika",143,"datascience"));
+		System.out.println(arraylist);
+		Iterator<StudentDetails> iterator=arraylist.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		new StudentInformation().Simplemethod();
+		
+	}
+
+}
