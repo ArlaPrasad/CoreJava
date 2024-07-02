@@ -1,0 +1,60 @@
+package com.venkat.LIST;
+
+import java.util.Enumeration;
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Vector;
+
+public class BasedOnVector {
+	void Simplemethod() {
+		
+	Vector <Object>vector=new Vector<Object>();
+	System.out.println("based on vector list");
+	vector.add(20);         // insertion order is maintained
+	vector.add("venkat");   //  heterogeneous data is allowed		
+	vector.add(null);      //  null is allowed
+	vector.add(true);       //  duplicates are allowed
+	vector.add(90);        //   default capacity is 10
+	vector.add(20);       //   it size increased by double
+	vector.add("vara");   //   it available from java 1.0v
+	vector.add(63);            //   it is synchronized by default
+	vector.add("prasad");
+	System.out.println(vector);
+	System.out.println();
+	System.out.println("========================");
+	System.out.println("use get method "+vector.size());
+	System.out.println("use capacity method "+vector.capacity());
+	vector.add(82);
+	vector.add(83);
+	System.out.println(vector);
+	System.out.println("after adding some data into vector list "+vector.capacity());
+	System.out.println("========================");
+	for(int i=0;i<=vector.size()-1;i++) {
+		
+		System.out.print(" "+vector.get(i));
+		
+	}
+	System.out.println();
+	System.out.println();
+	for(Object data:vector) {
+		System.out.print(" "+data);
+	}
+	System.out.println();
+	System.out.println();
+	//Enumeration<Object> elements=vector.elements();
+	ListIterator<Object> list=vector.listIterator();
+	while(list.hasNext()) {
+		System.out.print(" "+list.next());
+	}
+	System.out.println();
+	while(list.hasPrevious()) {
+		System.out.print(" "+list.previous());
+	}
+	}
+
+	public static void main(String[] args) {
+		new BasedOnVector().Simplemethod();
+
+	}
+
+}
