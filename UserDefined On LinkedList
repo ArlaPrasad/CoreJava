@@ -1,0 +1,61 @@
+package com.venkat.UserdefinedOnList;
+
+public class UserDetails {
+	private String userName;
+	private int userNo;
+	private String userAddres;
+	public UserDetails(String userName, int userNo, String userAddres) {
+		super();
+		this.userName = userName;
+		this.userNo = userNo;
+		this.userAddres = userAddres;
+	}
+	@Override
+	public String toString() {
+		return "UserDetails [userName=" + userName + ", userNo=" + userNo + ", userAddres=" + userAddres + "]";
+	}
+	
+
+}
+
+
+=======================================================================================================================================
+
+
+
+package com.venkat.UserdefinedOnList;
+
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class UserInform {
+	void simpleMethod() {
+		LinkedList<UserDetails> list=new LinkedList<UserDetails>();
+		list.add(new UserDetails("prasad",11,"nagarajupadu"));
+		list.add(new UserDetails("venkata", 12, "hyderabad"));
+		list.add(new UserDetails("rajesh", 13, "kammam"));
+		list.add(new UserDetails("teju", 14, "nirmal"));
+		System.out.println(list);
+		System.out.println();
+		ListIterator<UserDetails> iterator=list.listIterator();
+		for(Object data :list) {
+			System.out.println(data);
+		}
+		System.out.println();
+		System.out.println();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		System.out.println();
+		System.out.println();
+		while(iterator.hasPrevious()) {
+			System.out.println(iterator.previous());
+		}
+	}
+
+	public static void main(String[] args) {
+		new UserInform().simpleMethod();
+
+	}
+
+}
