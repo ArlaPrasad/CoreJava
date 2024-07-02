@@ -1,0 +1,68 @@
+package com.venkat.LIST;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class BasedOnArrayList {
+	public void Simplemethod() {
+		ArrayList<Object> arraylist=new ArrayList<Object>();
+		arraylist.add(10);             // insertion order is maintained
+		arraylist.add("venkatamouni");// heterogeneous data  is allowed 
+		arraylist.add('a');           // null is allowed
+		arraylist.add(null);            //  duplicates are allowed
+		arraylist.add(20);              //  default capacity is 10
+		arraylist.add(928);              //  it size increased by half
+		arraylist.add(839);             //   it available from java 1.2v 
+		System.out.println(arraylist);  //it is non-synchronized by default
+		System.out.println("===================================");
+		System.out.println("size of the arraylist : "+arraylist.size());
+		System.out.println(" "+arraylist.get(0));
+		System.out.println(" "+arraylist.clone());
+		System.out.println(" "+arraylist.hashCode());
+		System.out.println(" "+arraylist.toString());
+		System.out.println("retriving the data forward direction by using for loop");
+		
+		for(int i=0;i<=arraylist.size()-1;i++) {
+			System.out.print(" "+arraylist.get(i));
+			
+		}
+		System.out.println();
+		System.out.println();
+		System.out.println("retriving the data by using the for each loop");
+		for(Object data:arraylist) {
+			System.out.print(data+" ");
+		}
+		System.out.println();
+		System.out.println();
+		System.out.println("retriving the data by using iterator");
+		//Iterator<Object> iterator=arraylist.iterator();
+		ListIterator<Object> iterator = arraylist.listIterator();
+		while(iterator.hasNext()) {
+			System.out.print(" "+iterator.next());
+		}
+		System.out.println();
+		System.out.println();
+		while(iterator.hasPrevious()) {
+			System.out.print(" "+iterator.previous());
+			
+		}
+		System.out.println("----------------");
+		//arraylist.clear();
+		System.out.println(arraylist);
+		System.out.println("use empty method "+arraylist.isEmpty());
+		System.out.println("use contains "+arraylist.contains(1));
+		//System.out.println(arraylist.containsAll(arraylist));
+		System.out.println("remove method "+arraylist.remove(3));
+		System.out.println(arraylist);
+		System.out.println("remove method "+arraylist.removeAll(arraylist));
+		System.out.println(arraylist);
+		
+	}
+
+	public static void main(String[] args) {
+		new BasedOnArrayList().Simplemethod();
+
+	}
+
+}
