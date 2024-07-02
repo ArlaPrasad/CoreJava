@@ -1,0 +1,53 @@
+package com.venkat.UserdefinedOnList;
+
+public class EmployeeDetails {
+	private String empName;
+	private int empId;
+	private String empAddress;
+	public EmployeeDetails(String empName, int empId, String empAddress) {
+		//super();
+		this.empName = empName;
+		this.empId = empId;
+		this.empAddress = empAddress;
+	}
+	@Override
+	public String toString() {
+		return "EmployeeDetails [empName=" + empName + ", empId=" + empId + ", empAddress=" + empAddress + "]";
+	}
+
+}
+
+
+
+================================================================================================================
+
+
+
+package com.venkat.UserdefinedOnList;
+
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class EmployeeInfo {
+	void simpleMethod() {
+	Vector<EmployeeDetails> vector=new Vector<EmployeeDetails>();
+	EmployeeDetails details=new EmployeeDetails("narayana",120,"nirmal");
+	vector.add(new EmployeeDetails("venkat",121,"ameerpet"));
+	vector.add(new EmployeeDetails("sushanth",122,"maharashtra"));
+	vector.add(new EmployeeDetails("raju",123,"ananthapuram"));
+	vector.add(new EmployeeDetails("laxmi narayan",124,"gunturu"));
+	System.out.println(vector);
+	System.out.println("===================");
+	Enumeration<EmployeeDetails> elements = vector.elements();
+	while(elements.hasMoreElements()) {
+		System.out.print(" "+elements.nextElement());
+	}
+	
+	}
+	public static void main(String[] args) {
+		new EmployeeInfo().simpleMethod();
+		
+
+	}
+
+}
